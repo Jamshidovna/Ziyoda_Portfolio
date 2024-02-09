@@ -28,7 +28,7 @@ const Home = () => {
            initial='hidden' 
            animate='show' 
            exit='hidden' 
-          className=' text-4xl -mt-10'>Z.Jamshidovna <br/> Front-end {''}
+          className=' text-4xl mt-6'>Z.Jamshidovna <br/> Front-end {''}
           <span className=' text-accent'> Developer <br/></span>
           </motion.h1>
           <motion.p 
@@ -55,16 +55,22 @@ const Home = () => {
         </div>
       </div>
     <div className=' w-[1200px] h-full absolute right-0 bottom-0'>
-      <div className=' bg-none xl:bg-cover xl:bg-no-repeat  absolute mix-blend-lighten translate-z-0'>
-      <Image src='/stars.jpg' width={700} height={400} className=' ml-72' alt=''/>
+      <div className=' bg-none -mt-96  xl:bg-cover xl:bg-no-repeat  absolute mix-blend-lighten translate-z-0'>
+      <Image src='/stars.jpg' width={1080} height={400}  alt='stars'/>
       </div>
-      <div>
-        <div>
-          {/* <Avatar/> */}
-        </div>
+        <ParticlesContainer/>
+        <motion.div 
+        variants={fadeIn('up', 0.5)} 
+        initial='hidden' 
+        animate='show' 
+        exit='hidden' 
+        transition={{duration:1, ease:'easeInOut'}}
+        className=' w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-28 lg:bottom-0 lg:left-[30%]'>
+          <Avatar/>
+        </motion.div>
       </div>
     </div>
-      </div>
+     
   )
 };
 

@@ -1,4 +1,4 @@
-// icons
+import React, {useState} from "react";
 import {
   FaHtml5,
   FaCss3,
@@ -16,9 +16,10 @@ import {
 } from "react-icons/si";
 
 import Head from 'next/head';
+import Avatar from '../../components/Avatar';
+import Circles from '../../components/Circles'
 
 
-//  data
 const aboutData = [
   {
     title: 'skills',
@@ -99,13 +100,14 @@ const metadata = {
 
 
 const About = () => {
+  const [index, setIndex] = useState(0);
   return (
   <div>
     <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
-    About
+      <Circles/>
     </div>
     )
 };

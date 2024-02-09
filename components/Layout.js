@@ -23,7 +23,7 @@ const Layout = ({children}) => {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
-  <TopLeftImg/>
+  {/* <TopLeftImg/> */}
   <Navbar/>
   <Header/>
   {children}
