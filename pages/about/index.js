@@ -30,16 +30,14 @@ const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-         
+          <FaHtml5 key="html5" />,
+          <FaCss3 key="css3" />,
+          <FaJs key="js" />,
+          <FaReact key="react" />,
+          <SiNextdotjs key="nextjs" />,
+          <SiFramer key="framer" />,
         ],
       },
-     
     ],
   },
   {
@@ -47,15 +45,15 @@ const aboutData = [
     info: [
       {
         title: 'English',
-      
+        key: 'english',
       },
       {
         title: 'Russian',
-        
+        key: 'russian',
       },
       {
         title: 'Uzbek',
-        
+        key: 'uzbek',
       },
     ],
   },
@@ -65,12 +63,12 @@ const aboutData = [
       {
         title: 'Tashkent University of Information Technologies',
         stage: 'Computer networks and telecommunications',
+        key: 'university',
       },
-      
     ],
   },
-  
 ];
+
 
 const metadata = {
   title: '_Portfolio/about',
@@ -149,7 +147,7 @@ const About = () => {
                    <div>{item.stage}</div>
                    <div className=" flex gap-x-4 ">
                       {item.icons?.map((icon, itemIndex) =>{
-                         return <div className=" text-2xl text-white ">{icon}</div>
+                         return <div key={itemIndex} className=" text-2xl text-white ">{icon}</div>
                       })}
                    </div>
                   
